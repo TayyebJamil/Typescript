@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+
+  <input type="number" id="num1">
+  <select id="operator">
+    <option value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="multiply">x</option>
+    <option value="divide">÷</option>
+  </select>
+  <input type="number" id="num2">
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    class Calculator {
+      add(a, b) {
+        return a + b;
+      }
+
+      subtract(a, b) {
+        return a - b;
+      }
+
+      multiply(a, b) {
+        return a * b;
+      }
+
+      divide(a, b) {
+        if (b === 0) {
+          throw new Error("Division by zero is not allowed");
+        }
+        return a / b;
+      }
+    }
+
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const operator = document.getElementById('operator').value;
+
+      const calculator = new Calculator();
+      let result;
+      switch (operator) {
+        case 'add':
+          result = calculator.add(num1, num2);
+          break;
+        case 'subtract':
+          result = calculator.subtract(num1, num2);
+          break;
+        case 'multiply':
+          result = calculator.multiply(num1, num2);
+          break;
+        case 'divide':
+          result = calculator.divide(num1, num2);
+          break;
+        default:
+          result = "Invalid operator";
+      }
+
+      document.getElementById('result').innerText = `Result: ${result}`;
+    }
+  </script>
+</body>
+</html>
