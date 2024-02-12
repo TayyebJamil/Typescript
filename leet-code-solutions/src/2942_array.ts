@@ -6,6 +6,7 @@
 // Note that the returned array may be in any order. -->
  
 const input = prompt("Enter words separated by commas: ");
+ 
 const words: string[] = input!.split(",").map((word) => word.trim());
 
 const a: string = prompt("Enter character to be found: ") || "";
@@ -18,7 +19,7 @@ for (let i = 0; i < words.length; i++) {
     const word: string = words[i];
     for (let j = 0; j < word.length; j++) {
     if(word[j]==a){
-        console.log("Your character "+a+"occurs at inde "+i)
+        console.log("Your character "+a+" occurs at inde "+i)
         }
     }
       

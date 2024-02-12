@@ -12,7 +12,7 @@ for (let i = 0; i < words.length; i++) {
     const word = words[i];
     for (let j = 0; j < word.length; j++) {
         if (word[j] == a) {
-            console.log("Your character " + a + "occurs at inde " + i);
+            console.log("Your character " + a + " occurs at inde " + i);
         }
     }
 }
