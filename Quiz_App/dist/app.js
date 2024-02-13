@@ -111,7 +111,7 @@ function resetState() {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
-let time = 20; // Set initial time to 1 minute (60 seconds)
+let time = 30; // Set initial time to 1 minute (60 seconds)
 const timerElement = document.getElementById('time');
 const nextButton = document.getElementById('nextButton');
 const timerInterval = setInterval(() => {
@@ -143,6 +143,25 @@ function showScore() {
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
+// function showScore(): void {
+//     resetState();
+//     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+//     // Display incorrect questions and their correct answers
+//     for (let i = 0; i < questions.length; i++) {
+//         const currentQuestion: Question = questions[i];
+//         const isCorrect: boolean = currentQuestion.answers.some(answer => answer.correct);
+//         if (!isCorrect) {
+//             questionElement.innerHTML += `<br>${i + 1}. ${currentQuestion.question}`;
+//             currentQuestion.answers.forEach(answer => {
+//                 if (answer.correct) {
+//                     questionElement.innerHTML += `<br> - ${answer.text}`;
+//                 }
+//             });
+//         }
+//     }
+//     nextButton.innerHTML = "Play Again";
+//     nextButton.style.display = "block";
+// }
 function handleNextButton() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -162,15 +181,3 @@ nextButton.addEventListener("click", () => {
     }
 });
 startQuiz();
-// Timer logic
-// let time = 30; // Set initial time to 1 minute (60 seconds)
-// const timerElement = document.getElementById('time');
-// const timerInterval = setInterval(() => {
-//     time--;
-//     if (time >= 0) {
-//         const minutes = Math.floor(time / 60);
-//         const seconds = time % 60;
-//         timerElement!.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-//     }
-// }, 1000);
-// Update every second
