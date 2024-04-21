@@ -13,4 +13,4 @@ function sayHi() {
     console.log('Hi!');
 }
 let speech = sayHi();
-console.log(sayHi()); //Output: undefined
+console.log(speech); //Output: undefined

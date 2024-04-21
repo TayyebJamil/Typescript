@@ -1,0 +1,1 @@
+export const myVariable: string = "Hello from file1";

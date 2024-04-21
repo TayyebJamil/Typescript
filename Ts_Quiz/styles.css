@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#startButton {
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold
+}
+
+.app {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #3498db;
+    /* Add your preferred background color */
+    padding: 20px;
+    /* Add padding for better spacing */
+    color: white;
+    font-weight: bold
+        /* Text color */
+}
+
+.quiz-header span {
+    margin-right: 10px;
+    /* Adjust the margin between the timer and question counter */
+}
+
+#timer {
+    font-weight: bold;
+    color: white;
+    /* Make the timer text bold */
+}
+
+#question-counter {
+    font-weight: bold;
+    color: white;
+    /* Make the question counter text bold */
+}
+
+
+/* .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+
+
+#question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#answerButtons {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+#resetButton,
+#nextButton {
+    display: block;
+    width: 100%;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#resetButton:hover,
+#nextButton:hover {
+    background-color: #2980b9;
+}
+
+/* Add this CSS snippet to your existing styles */
+#resultSection {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#incorrectAnswers {
+    text-align: left;
+}
+
+#incorrectAnswers h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#incorrectAnswersList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#incorrectAnswersList li {
+    margin-bottom: 10px;
+}
+
+#homeButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#homeButton:hover {
+    background-color: #2980b9;
+}
